@@ -1,112 +1,832 @@
+# 🧬 ForgeLM-Datasets
+<img width="1983" height="793" alt="image" src="https://github.com/user-attachments/assets/e3bdd281-90ed-446f-9e9b-5243cb47ee8f" />
 
-## Unlock the Power of LLM: Explore These Datasets to Train Your Own ChatGPT!
+<p align="center">
 
-## Select your own mixed dataset
-> ```bash
-> git clone https://github.com/upadrastaharshavardhan/ForgeLM-datasets
-> cd ForgeLM-datasets/mixed/dataset
-> ```
-> pick whatever dataset you want to use, then merge and upload:
-> ```bash
-> python preprocess.py your_dataset_name_to_HuggingFaceHub
-> ```
+# ForgeLM Datasets
 
-## Dataset Detail
+### 🔥 Build Your Own LLM Training Dataset
 
-*Sorted by dataset size (small → large). Items with unknown size appear at the end.*
+**A curated collection of open datasets for instruction tuning, SFT, RLHF, reasoning, coding, multilingual AI, safety, function calling, multimodal learning, and conversational AI.**
 
-Dataset Name | Size | Languages | Source | License
----|---|---|---|---
-[TheoremQA](https://huggingface.co/datasets/TIGER-Lab/TheoremQA) | 1K | English | We annotated 800 QA pairs covering 350+ theorems spanning across Math, EE&CS, Physics and Finance. | mit
-[LIMA](https://huggingface.co/datasets/GAIR/lima) | 1K | English | LIMA: Less Is More for Alignment. | cc-by-nc-sa-4.0
-[WildGuardMix](https://huggingface.co/datasets/allenai/wildguardmix) | 1.7K | English | Safety training mixture with vanilla/adversarial prompts and multi-annotator labels. | odc-by
-[Berkeley Function Calling Leaderboard (BFCL)](https://huggingface.co/datasets/gorilla-llm/Berkeley-Function-Calling-Leaderboard) | 2K | English + code | Function/tool-calling eval covering parallel/multi-call scenarios across languages. | -
-[im-feeling-curious](https://huggingface.co/datasets/xiyuez/im-feeling-curious) | 3K | English | Extract from Google’s “I’m Feeling Curious” facts. | -
-[Puffin](https://huggingface.co/datasets/LDJnr/Puffin) | 3K | English | Exactly 3,000 multi-turn examples; each response via GPT‑4. | apache-2.0
-[cc_sbu_align](https://huggingface.co/datasets/Vision-CAIR/cc_sbu_align) | 4K | English | MiniGPT‑4 alignment data (image–text). | bsd-3-clause
-[QA-Feedback](https://huggingface.co/datasets/tasksource/QA-Feedback) | 4K | English | Re‑constructed ASQA with human feedback. | -
-[SLF5K](https://huggingface.co/datasets/JeremyAlain/SLF5K) | 5K | English | Summarization with Language Feedback (5K unique samples). | apache-2.0
-[blended_skill_talk](https://huggingface.co/datasets/blended_skill_talk) | 7K | English | 7k conversations blending personality, empathy, and knowledge. | -
-[GSM‑IC](https://github.com/google-research-datasets/GSM-IC) | 8K | English | Grade‑School Math with Irrelevant Context (distractor sentences). | -
-[ChatAlpaca‑10K](https://huggingface.co/datasets/flpelerin/ChatAlpaca-10k) | 10K | English | 10,000 multi‑turn conversations (Alpaca‑based). | apache-2.0
-[PKU‑SafeRLHF‑10K](https://huggingface.co/datasets/PKU-Alignment/PKU-SafeRLHF-10K) | 10K | English | First‑round Safe‑RLHF data with safety preferences. | -
-[Dolly‑15K](https://huggingface.co/datasets/databricks/databricks-dolly-15k) | 15K | English | 15k instruction records crowdsourced by Databricks. | cc-by-3.0
-[WebGPT (comparisons)](https://huggingface.co/datasets/openai/webgpt_comparisons) | 20K | English | Human preference comparisons for WebGPT reward modeling. | -
-[CodeAlpaca‑20K](https://huggingface.co/datasets/sahil2801/CodeAlpaca-20k) | 20K | English | 20,022 instruction–code pairs for code generation. | -
-[HelpSteer2](https://huggingface.co/datasets/nvidia/HelpSteer2) | 21K | English | Open-source helpfulness data for reward models and preference learning. | cc-by-4.0
-[openapi-function-invocations‑25k](https://huggingface.co/datasets/unaidedelf87777/openapi-function-invocation-25k) | 25K | English | Synthetic + extracted OpenAPI function-call traces. | mit
-[LongForm](https://huggingface.co/collections/akoksal/longform-651a946d99cf1a4e396060a8) | 28K | English | Reverse‑instruction long‑text generation dataset. | mit
-[Chatbot Arena Conversations](https://huggingface.co/datasets/lmsys/chatbot_arena_conversations) | 33K | English | 33K cleaned Arena chats with pairwise preferences. | -
-[HC3](https://huggingface.co/datasets/Hello-SimpleAI/HC3) | 37K | English, Chinese | 37,175 instructions with human vs LLM answers. | -
-[Anthropic HH Golden](https://huggingface.co/datasets/Anthropic/hh-rlhf) | 45K | English | Helpful & Harmless preference data; golden subset. | -
-[Mol‑Instructions](https://huggingface.co/datasets/zjunlp/Mol-Instructions) | 48K | English | Biomolecular instruction dataset for LLMs. | cc-by-4.0
-[RefGPT](https://huggingface.co/datasets/xusenlinzy/refgpt-1.0) | 50K | English, Chinese | Cost‑effective pipeline to generate multi‑turn Q&A with references. | -
-[arxiv‑math‑instruct‑50k](https://huggingface.co/datasets/LIAMF-USP/arxiv-math-instruct-50k) | 50K | English | QA pairs derived from arXiv math abstracts. | -
-[arxiv‑math‑instruct‑50k (ArtifactAI)](https://huggingface.co/datasets/ArtifactAI/arxiv-math-instruct-50k) | 51K | English | T5‑generated questions; GPT‑3.5 answers. | -
-[Traditional Chinese Alpaca](https://huggingface.co/datasets/voidful/alpaca-trad-chinese) | 52K | Traditional Chinese | Alpaca translated by ChatGPT API. | apache-2.0
-[Cabrita Dataset](https://huggingface.co/datasets/cabrita-labs/cabrita-instruct-52k) | 52K | Portuguese | Alpaca translated to Portuguese. | -
-[Japanese Alpaca](https://huggingface.co/datasets/studioml-staging/japanese-alpaca-data) | 52K | Japanese | Alpaca translated by ChatGPT API. | cc-by-nc-4.0; OpenAI terms
-[Alpaca Dataset](https://huggingface.co/datasets/tatsu-lab/alpaca) | 52K | English | 175 seed instructions completed by OpenAI. | cc-by-nc-4.0; OpenAI terms
-[Alpaca Data Cleaned](https://huggingface.co/datasets/yahma/alpaca-cleaned) | 52K | English | Cleaned Alpaca 52K. | -
-[Alpaca GPT‑4 Data](https://huggingface.co/datasets/vicgalle/alpaca-gpt4) | 52K | English | Same prompts, GPT‑4 completions. | -
-[Alpaca GPT‑4 Chinese](https://huggingface.co/datasets/Instruction-Tuning-with-GPT-4/GPT-4-LLM) | 52K | Chinese | GPT‑4 completions for Chinese prompts. | -
-[xLAM Function Calling 60K](https://huggingface.co/datasets/Salesforce/xlam-function-calling-60k) | 60K | English | Structured tool-calling data for executable agents. | apache-2.0
-[Dynosaur](https://huggingface.co/datasets/YUWEI995/dynosaur) | 66K | English | Dynamic growth paradigm for instruction curation. | apache-2.0
-[Finance](https://huggingface.co/datasets/gbharti/finance-alpaca) | 69K | English | 68,912 finance‑related instructions. | -
-[WizardLM evol](https://huggingface.co/datasets/WizardLM/evol-instruct) | 70K | English | Evolutionary instruction tuning data (WizardLM). | -
-[Vicuna Dataset](https://huggingface.co/datasets/lmsys/vicuna) | 75K | English | ~100k ShareGPT conversations (curated). | -
-[InstructionTranslation](https://huggingface.co/datasets/Instruction-Tuning-with-GPT-4/Instruction-Translation) | 80K | Multi-lingual | M2M‑12B translated instructions (≤512 tokens). | mit
-[Self‑Instruct](https://huggingface.co/datasets/yizhongw/self_instruct) | 82K | English | 52K seed instructions; 82K I/O pairs. | -
-[OASST1](https://huggingface.co/datasets/OpenAssistant/oasst1) | 89K | Multi-lingual | Human‑generated assistant conversations (35 languages). | apache-2.0
-[HH‑RLHF](https://huggingface.co/datasets/Anthropic/hh-rlhf) | 91K | English | Helpful/harmless RLHF pairs. | mit
-[Guanaco Dataset](https://huggingface.co/datasets/JosephusCheung/GuanacoDataset) | 98K | En, Zh‑CN, Zh‑HK/TW, Ja | 175 Alpaca tasks across languages. | gpl-3.0
-[InstructionWild](https://huggingface.co/datasets/XueFuzhao/InstructionWild) | 104K | English, Chinese | Seeded 429 instructions; ~52K generated. | research-only; OpenAI terms
-[CAMEL Dataset](https://huggingface.co/datasets/camel-ai/math) | 107K | English | Multi‑role, topic‑diverse instruction dialogues. | -
-[TAPIR‑Cleaned](https://huggingface.co/datasets/voidful/Tapir-Cleaned) | 117K | English | Cleaned IFTTT rule dataset for instruction tuning. | cc-by-nc-4.0
-[OASST2 (final)](https://huggingface.co/datasets/OpenAssistant/oasst2) | 135K | Multi-lingual | Open Assistant Conversations Release 2 (train+val). | apache-2.0
-[WizardLM Evol‑Instruct V2](https://huggingface.co/datasets/WizardLM/WizardLM_evol_instruct_V2_196k) | 143K | English | 143K mixture‑evolved data. | -
-[LLaVA Visual Instruct 150K](https://huggingface.co/datasets/liuhaotian/LLaVA-Instruct-150K) | 150K | English | GPT‑generated multimodal instruction pairs. | cc-by-nc-4.0
-[ProsocialDialog](https://huggingface.co/datasets/allenai/prosocial-dialog) | 166K | English | 165,681 prosocial instructions and feedback. | -
-[M2Lingual](https://huggingface.co/datasets/ServiceNow-AI/M2lingual) | 175K | Multi-lingual | Multilingual mixed‑modal (code+text) chat/instruct SFT. | -
-[COIG](https://huggingface.co/datasets/BAAI/COIG) | 191K | Chinese | Chinese Open Instruction Generalist. | apache-2.0
-[orca‑chat](https://huggingface.co/datasets/Open-Orca/OpenOrca) | 198K | English | Cleaned, pruned conversation‑style Orca subset. | -
-[OpenR1‑Math‑220k](https://huggingface.co/datasets/open-r1/OpenR1-Math-220k) | 220K | English | DeepSeek‑R1 distilled math traces (verified). | apache-2.0
-[Unnatural Instructions](https://huggingface.co/datasets/allenai/natural-instructions) | 241K | English | Large creative/diverse instruction corpus. | mit
-[WildJailbreak](https://huggingface.co/datasets/allenai/wildjailbreak) | 262K | English | Synthetic jailbreak and benign contrastive prompts. | odc-by
-[SHP](https://huggingface.co/datasets/stanfordnlp/SHP) | 358K | English | 385K Reddit preference pairs across 18 topics. | reddit – revocable, non‑exclusive
-[Dromedary](https://huggingface.co/datasets/MBZUAI/LaMini-instruction) | 361K | English | Dromedary‑Verbose‑Clone synthetic instructions. | cc-by-nc-4.0
-[UltraChat](https://huggingface.co/datasets/HuggingFaceH4/ultrachat_200k) | 404K | English | Dual‑API generation (user vs assistant) for quality control. | cc-by-nc-4.0
-[IGN Clean Instruct 500K](https://huggingface.co/datasets/teknium/ign_clean_instruct_dataset_500k) | 509K | English | ~508k Ultrachat‑sourced, high‑quality instructions. | apache-2.0
-[ELI5](https://huggingface.co/datasets/eli5) | 559K | English | Long‑form community Q&A (“Explain Like I’m Five”). | -
-[GPT4All](https://huggingface.co/datasets/nomic-ai/gpt4all_prompt_generations) | 806K | Multi-lingual | LAION OIG + StackOverflow + P3 prompts; OpenAI outputs. | -
-[Instruct](https://huggingface.co/datasets/yizhongw/self_instruct) | 889K | English | 888,969 English instructions (augmented). | mit
-[MOSS](https://huggingface.co/datasets/fnlp/moss-003-sft-data) | 1M | Chinese | GPT‑3.5‑turbo generated Chinese SFT data. | apache-2.0 + agpl-3.0
-[WildChat](https://huggingface.co/datasets/allenai/WildChat) | 1.0M | English | In‑the‑wild user–LLM chat dataset (license updated). | odc-by
-[smolTalk](https://huggingface.co/datasets/HuggingFaceTB/smoltalk) | 1.1M | English | Ultra‑compact multi‑turn chat for small‑scale SFT. | apache-2.0
-[Open‑PerfectBlend](https://huggingface.co/datasets/mlabonne/open-perfectblend) | 1.42M | English | Diverse, deduped chat blend for general SFT. | apache-2.0
-[The Tome](https://huggingface.co/datasets/arcee-ai/The-Tome) | 1.75M | English | Large cleaned instruction dataset curated by Arcee. | mit
-[NaturalReasoning](https://huggingface.co/datasets/facebook/natural_reasoning) | 2.8M | English | 2.8M challenging reasoning questions (decontaminated). | cc-by-nc-4.0
-[LaMini‑Instruction](https://huggingface.co/datasets/MBZUAI/LaMini-instruction) | 3.0M | English | ~2.58M–3M instruction–response pairs (GPT‑3.5). | cc-by-nc-4.0
-[OpenOrca (full)](https://huggingface.co/datasets/Open-Orca/OpenOrca) | 3.0M | English | GPT‑4/3.5 augmented FLAN collection. | -
-[WildChat‑4.8M (nontoxic subset)](https://huggingface.co/datasets/allenai/WildChat) | 3.20M | English | Nontoxic filtered split of WildChat 4.8M. | odc-by
-[Infinity‑Instruct](https://huggingface.co/datasets/BAAI/Infinity-Instruct) | 8.9M | Multi-lingual | 7.4M base + ~1.5M chat instruction data. | cc-by-sa-4.0
-[BELLE‑10M](https://huggingface.co/datasets/BelleGroup/train_1M_CN) | 10M | Chinese | Multi‑type Chinese instructions across domains. | research-only; OpenAI terms
-[Firefly](https://huggingface.co/datasets/YeungNLP/firefly-train-1.1M) | 16M | Chinese | 1.6M+ Chinese instructions across 23 NLP tasks (expanded corpora). | -
-[OIG‑43M](https://huggingface.co/datasets/laion/OIG) | 43M | Multi-lingual | LAION + Together + OntoCord composite instruction pool. | -
-[xP3](https://huggingface.co/datasets/bigscience/xP3) | 79M | Multi-lingual | 78,883,588 instructions from prompted datasets across 46 languages & 16 tasks. | -
+<p align="center">
 
-### Unknown / mixed-size (kept for completeness; format consistent with original)
+[![Datasets](https://img.shields.io/badge/Datasets-100%2B-blue?style=for-the-badge)](#-dataset-catalog)
+[![Languages](https://img.shields.io/badge/Languages-Multilingual-purple?style=for-the-badge)](#-language-coverage)
+[![HuggingFace](https://img.shields.io/badge/HuggingFace-Datasets-yellow?style=for-the-badge)](https://huggingface.co/datasets)
+[![GitHub](https://img.shields.io/badge/GitHub-ForgeLM-black?style=for-the-badge)](https://github.com/upadrastaharshavardhan)
+[![License](https://img.shields.io/badge/License-Varies-orange?style=for-the-badge)](#-license--usage)
 
-Dataset Name | Size | Languages | Source | License
----|---|---|---|---
-[CodeParrot](https://huggingface.co/datasets/codeparrot/codeparrot-clean) | - | python | 180GB Python files (<1MB each), 20M+ files. | -
-[Alpaca‑CoT](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT) | - | Multi-lingual | Instruction data with chain‑of‑thought traces. | odc-by
-[stack-exchange-paired](https://huggingface.co/datasets/stanfordnlp/stack-exchange-paired) | - | English | StackExchange Q&A pairs for preference modeling. | cc-by-sa-4.0
-[LangChainDatasets](https://github.com/langchain-ai/langchain/tree/master/cookbook) | - | English | Community datasets to evaluate chains & agents. | -
-[ParlAI](https://github.com/facebookresearch/ParlAI) | - | English | Dialog research platform with many tasks/datasets. | -
-[GPTeacher](https://huggingface.co/datasets/teknium/GPTeacher-General-Instruct) | - | English | Instruction datasets consolidated for general SFT. | -
-[Wizard‑LM Chinese Evol](https://huggingface.co/datasets/WizardLM/WizardLM_Chinese_instruct_dataset) | - | Chinese | Chinese evol‑instruct corpus. | -
-[MultiWOZ](https://huggingface.co/datasets/multi_woz_v22) | - | English | Multi‑domain Wizard‑of‑Oz dialog dataset. | -
-[ToolACE](https://huggingface.co/datasets/Team-ACE/ToolACE) | - | English | Multi‑tool calling SFT (functions, API JSON, tool plans). | -
-[UltraFeedback (cleaned binarized)](https://huggingface.co/datasets/argilla/ultrafeedback-binarized-preferences-cleaned) | - | English | UltraFeedback preferences cleaned & binarized. | cc-by-nc-4.0
-[glaive‑function‑calling‑v2](https://huggingface.co/datasets/glaiveai/glaive-function-calling-v2) | - | English | Function‑calling SFT dataset with tool schemas & arguments. | apache-2.0
+</p>
+
+</p>
+
+---
+
+## 🚀 What Is ForgeLM-Datasets?
+
+**ForgeLM-Datasets** is a curated dataset collection designed to help researchers, developers, students, and AI engineers quickly discover and assemble datasets for building their own Large Language Models and specialized AI systems.
+
+Instead of searching across dozens of repositories individually, this project provides a centralized catalog of datasets covering:
+
+* 🧠 Instruction tuning
+* 💬 Conversational AI
+* 💻 Code generation
+* 🧮 Mathematical reasoning
+* 🔬 Scientific reasoning
+* 🛡️ AI safety
+* 🔧 Function calling
+* 🤖 Agentic AI
+* 🌍 Multilingual training
+* 👁️ Vision-language learning
+* 🎯 Preference optimization
+* 🧪 Evaluation
+* 📚 Knowledge-intensive QA
+* 🧩 Long-context and long-form generation
+
+The goal is simple:
+
+> **Discover → Select → Merge → Preprocess → Upload → Train**
+
+---
+
+# 🗺️ Quick Start
+
+## 1️⃣ Clone the Dataset Repository
+
+```bash
+git clone https://github.com/upadrastaharshavardhan/ForgeLM-datasets
+```
+
+## 2️⃣ Navigate to the Mixed Dataset Collection
+
+```bash
+cd ForgeLM-datasets/mixed/dataset
+```
+
+## 3️⃣ Select Your Dataset
+
+Choose any dataset that matches your training objective.
+
+Examples:
+
+```text
+Instruction Tuning
+├── Alpaca
+├── Dolly
+├── Self-Instruct
+└── WizardLM
+
+Reasoning
+├── NaturalReasoning
+├── OpenR1-Math
+├── TheoremQA
+└── GSM-IC
+
+Code
+├── CodeAlpaca
+├── CodeParrot
+└── Function Calling datasets
+
+Safety
+├── WildGuardMix
+├── WildJailbreak
+├── SafeRLHF
+└── ProsocialDialog
+```
+
+## 4️⃣ Preprocess and Upload
+
+```bash
+python preprocess.py your_dataset_name_to_HuggingFaceHub
+```
+
+This allows you to prepare the selected dataset for your own training pipeline.
+
+---
+
+# 🧠 Dataset Selection Strategy
+
+Different models require different types of training data.
+
+### General-Purpose LLM
+
+Recommended combination:
+
+```text
+Instruction Data
+        +
+Conversation Data
+        +
+Knowledge QA
+        +
+Reasoning
+        +
+Preference Data
+```
+
+### Coding LLM
+
+```text
+Code Generation
+        +
+Code Instruction
+        +
+Function Calling
+        +
+Tool Usage
+        +
+Reasoning
+```
+
+### Agentic LLM
+
+```text
+Instruction Following
+        +
+Function Calling
+        +
+Tool Planning
+        +
+Multi-Turn Conversation
+        +
+Reasoning
+```
+
+### Safety-Aligned LLM
+
+```text
+SafeRLHF
+    +
+WildGuard
+    +
+WildJailbreak
+    +
+Prosocial Dialog
+    +
+Preference Data
+```
+
+---
+
+# 📊 Dataset Catalog
+
+The catalog is organized approximately from **smaller datasets to larger datasets**. Dataset sizes are based on the source information included in this project.
+
+## 🔹 Small → Medium Datasets
+
+| Dataset                      | Size | Language       | Primary Use                         |
+| ---------------------------- | ---: | -------------- | ----------------------------------- |
+| TheoremQA                    |   1K | English        | Mathematical / scientific reasoning |
+| LIMA                         |   1K | English        | Alignment                           |
+| WildGuardMix                 | 1.7K | English        | AI safety                           |
+| BFCL                         |   2K | English + Code | Function calling                    |
+| im-feeling-curious           |   3K | English        | Knowledge                           |
+| Puffin                       |   3K | English        | Multi-turn conversation             |
+| cc_sbu_align                 |   4K | English        | Image-text alignment                |
+| QA-Feedback                  |   4K | English        | QA + feedback                       |
+| SLF5K                        |   5K | English        | Summarization                       |
+| blended_skill_talk           |   7K | English        | Conversation                        |
+| GSM-IC                       |   8K | English        | Mathematics                         |
+| ChatAlpaca-10K               |  10K | English        | Instruction following               |
+| PKU-SafeRLHF-10K             |  10K | English        | Safety / preference                 |
+| Dolly-15K                    |  15K | English        | Instruction tuning                  |
+| WebGPT Comparisons           |  20K | English        | Preference learning                 |
+| CodeAlpaca-20K               |  20K | English        | Code generation                     |
+| HelpSteer2                   |  21K | English        | Helpfulness                         |
+| OpenAPI Function Invocations |  25K | English        | Tool calling                        |
+| LongForm                     |  28K | English        | Long-form generation                |
+
+---
+
+# 🔹 Medium-Scale Datasets
+
+| Dataset                     | Size | Language          | Primary Use                  |
+| --------------------------- | ---: | ----------------- | ---------------------------- |
+| Chatbot Arena Conversations |  33K | English           | Preference / conversations   |
+| HC3                         |  37K | English + Chinese | Human vs LLM detection       |
+| Anthropic HH Golden         |  45K | English           | Helpful / harmless alignment |
+| Mol-Instructions            |  48K | English           | Biology / scientific AI      |
+| RefGPT                      |  50K | English + Chinese | Referenced Q&A               |
+| arXiv Math Instruct         | 50K+ | English           | Mathematical instruction     |
+| Traditional Chinese Alpaca  |  52K | Chinese           | Instruction tuning           |
+| Cabrita Dataset             |  52K | Portuguese        | Multilingual instruction     |
+| Japanese Alpaca             |  52K | Japanese          | Instruction tuning           |
+| Alpaca                      |  52K | English           | Instruction tuning           |
+| Alpaca Cleaned              |  52K | English           | Instruction tuning           |
+| Alpaca GPT-4                |  52K | English           | Instruction tuning           |
+| Alpaca GPT-4 Chinese        |  52K | Chinese           | Instruction tuning           |
+| xLAM Function Calling       |  60K | English           | Tool calling                 |
+| Dynosaur                    |  66K | English           | Instruction curation         |
+| Finance                     |  69K | English           | Financial AI                 |
+| WizardLM Evol-Instruct      |  70K | English           | Instruction evolution        |
+| Vicuna                      |  75K | English           | Conversational AI            |
+| InstructionTranslation      |  80K | Multilingual      | Translation                  |
+| Self-Instruct               |  82K | English           | Instruction generation       |
+| OASST1                      |  89K | Multilingual      | Assistant conversations      |
+| HH-RLHF                     |  91K | English           | Preference alignment         |
+| Guanaco                     |  98K | Multilingual      | Instruction tuning           |
+
+---
+
+# 🔹 Large Datasets
+
+| Dataset                   | Size | Language          | Primary Use                 |
+| ------------------------- | ---: | ----------------- | --------------------------- |
+| InstructionWild           | 104K | English + Chinese | Instruction generation      |
+| CAMEL                     | 107K | English           | Multi-role dialogue         |
+| TAPIR-Cleaned             | 117K | English           | Instruction following       |
+| OASST2                    | 135K | Multilingual      | Assistant conversations     |
+| WizardLM Evol-Instruct V2 | 143K | English           | Instruction evolution       |
+| LLaVA Visual Instruct     | 150K | English           | Multimodal AI               |
+| ProsocialDialog           | 166K | English           | Safety                      |
+| M2Lingual                 | 175K | Multilingual      | Multimodal / code           |
+| COIG                      | 191K | Chinese           | Instruction tuning          |
+| OpenOrca                  | 198K | English           | Conversational AI           |
+| OpenR1-Math               | 220K | English           | Mathematical reasoning      |
+| Unnatural Instructions    | 241K | English           | Instruction generation      |
+| WildJailbreak             | 262K | English           | Safety / jailbreak research |
+| SHP                       | 358K | English           | Preference learning         |
+| Dromedary                 | 361K | English           | Instruction generation      |
+| UltraChat                 | 404K | English           | Conversational AI           |
+| IGN Clean Instruct        | 509K | English           | Instruction tuning          |
+| ELI5                      | 559K | English           | Long-form QA                |
+| GPT4All                   | 806K | Multilingual      | General instruction         |
+| Instruct                  | 889K | English           | Instruction tuning          |
+
+---
+
+# 🔥 Million-Scale Datasets
+
+| Dataset            |  Size | Language     | Primary Use                          |
+| ------------------ | ----: | ------------ | ------------------------------------ |
+| MOSS               |    1M | Chinese      | SFT                                  |
+| WildChat           |    1M | English      | Real-world conversation              |
+| smolTalk           |  1.1M | English      | Compact conversational SFT           |
+| Open-PerfectBlend  | 1.42M | English      | General SFT                          |
+| The Tome           | 1.75M | English      | Instruction tuning                   |
+| NaturalReasoning   |  2.8M | English      | Advanced reasoning                   |
+| LaMini-Instruction |    3M | English      | Instruction tuning                   |
+| OpenOrca Full      |    3M | English      | Instruction tuning                   |
+| WildChat Nontoxic  |  3.2M | English      | Safe conversation                    |
+| Infinity-Instruct  |  8.9M | Multilingual | Large-scale instruction              |
+| BELLE              |   10M | Chinese      | Instruction tuning                   |
+| Firefly            |   16M | Chinese      | Multi-task NLP                       |
+| OIG                |   43M | Multilingual | General instruction                  |
+| xP3                |   79M | Multilingual | Large-scale multilingual instruction |
+
+---
+
+# 🌍 Language Coverage
+
+ForgeLM-Datasets includes datasets covering:
+
+```text
+English
+Chinese
+Japanese
+Portuguese
+Multilingual
+Code
+Image + Text
+```
+
+Major multilingual resources include:
+
+* OASST
+* Guanaco
+* InstructionTranslation
+* M2Lingual
+* Infinity-Instruct
+* OIG
+* xP3
+
+The catalog ranges from English-only datasets to datasets covering dozens of languages.
+
+---
+
+# 🧩 Specialized Dataset Categories
+
+## 🧠 Reasoning
+
+Useful for improving mathematical, logical, and scientific reasoning:
+
+* TheoremQA
+* GSM-IC
+* OpenR1-Math
+* NaturalReasoning
+* arXiv Math Instruction
+
+---
+
+## 💻 Coding
+
+Useful for coding assistants and programming-focused models:
+
+* CodeAlpaca
+* CodeParrot
+* Function-calling datasets
+* Tool-use datasets
+
+---
+
+## 🔧 Function Calling
+
+Useful for agentic systems that need to invoke APIs, tools, and functions:
+
+* BFCL
+* OpenAPI Function Invocations
+* xLAM Function Calling
+* ToolACE
+* glaive-function-calling-v2
+
+---
+
+## 🛡️ Safety & Alignment
+
+Useful for safety training and preference alignment:
+
+* WildGuardMix
+* PKU-SafeRLHF
+* Anthropic HH-RLHF
+* WildJailbreak
+* ProsocialDialog
+* HelpSteer2
+* UltraFeedback
+
+---
+
+## 💬 Conversational AI
+
+Useful for chatbot and assistant development:
+
+* ChatAlpaca
+* Vicuna
+* OASST
+* OpenOrca
+* UltraChat
+* WildChat
+* Blended Skill Talk
+
+---
+
+## 👁️ Multimodal AI
+
+Useful for vision-language systems:
+
+* cc_sbu_align
+* LLaVA Visual Instruct
+* M2Lingual
+
+---
+
+# 🏗️ ForgeLM Dataset Pipeline
+
+```text
+                   ┌───────────────────────┐
+                   │   DATASET DISCOVERY    │
+                   └───────────┬───────────┘
+                               │
+                               ▼
+                   ┌───────────────────────┐
+                   │   DATASET SELECTION   │
+                   └───────────┬───────────┘
+                               │
+                               ▼
+                   ┌───────────────────────┐
+                   │  DOWNLOAD / COLLECT   │
+                   └───────────┬───────────┘
+                               │
+                               ▼
+                   ┌───────────────────────┐
+                   │       MERGE           │
+                   └───────────┬───────────┘
+                               │
+                               ▼
+                   ┌───────────────────────┐
+                   │     PREPROCESS        │
+                   └───────────┬───────────┘
+                               │
+                               ▼
+                   ┌───────────────────────┐
+                   │  QUALITY / VALIDATION │
+                   └───────────┬───────────┘
+                               │
+                               ▼
+                   ┌───────────────────────┐
+                   │   HUGGING FACE HUB    │
+                   └───────────┬───────────┘
+                               │
+                               ▼
+                   ┌───────────────────────┐
+                   │    MODEL TRAINING     │
+                   └───────────────────────┘
+```
+
+---
+
+# 🧪 Example Training Dataset Architecture
+
+A high-quality general-purpose dataset can be constructed by combining several categories:
+
+```text
+ForgeLM Training Mixture
+│
+├── Instruction Following
+│   ├── Alpaca
+│   ├── Dolly
+│   └── Self-Instruct
+│
+├── Conversation
+│   ├── OASST
+│   ├── UltraChat
+│   └── WildChat
+│
+├── Reasoning
+│   ├── NaturalReasoning
+│   ├── OpenR1-Math
+│   └── TheoremQA
+│
+├── Coding
+│   ├── CodeAlpaca
+│   └── CodeParrot
+│
+├── Tool Usage
+│   ├── BFCL
+│   ├── xLAM
+│   └── ToolACE
+│
+├── Safety
+│   ├── WildGuard
+│   ├── SafeRLHF
+│   └── WildJailbreak
+│
+└── Multilingual
+    ├── OASST
+    ├── xP3
+    └── Infinity-Instruct
+```
+
+---
+
+# ⚙️ Preprocessing Workflow
+
+The repository provides a simple workflow for selecting and preprocessing datasets.
+
+```bash
+git clone https://github.com/upadrastaharshavardhan/ForgeLM-datasets
+
+cd ForgeLM-datasets/mixed/dataset
+
+python preprocess.py <dataset_name>
+```
+
+The source project specifically describes selecting a dataset and then using `preprocess.py` to prepare it for Hugging Face Hub upload.
+
+---
+
+# 📦 Unknown / Mixed-Size Datasets
+
+Some datasets in the original catalog do not have a reliable size listed. They are intentionally retained rather than removed.
+
+| Dataset                    | Language     | Description                            |
+| -------------------------- | ------------ | -------------------------------------- |
+| CodeParrot                 | Python       | Large-scale Python code corpus         |
+| Alpaca-CoT                 | Multilingual | Instruction data with reasoning traces |
+| Stack Exchange Paired      | English      | Preference modeling                    |
+| LangChainDatasets          | English      | Chain / agent evaluation               |
+| ParlAI                     | English      | Dialogue research                      |
+| GPTeacher                  | English      | General instruction                    |
+| Wizard-LM Chinese Evol     | Chinese      | Evolved instructions                   |
+| MultiWOZ                   | English      | Multi-domain dialogue                  |
+| ToolACE                    | English      | Multi-tool calling                     |
+| UltraFeedback              | English      | Preference optimization                |
+| glaive-function-calling-v2 | English      | Function calling                       |
+
+---
+
+# ⚠️ Dataset & License Considerations
+
+**Dataset licenses vary significantly.**
+
+The catalog contains datasets under licenses including:
+
+* MIT
+* Apache-2.0
+* CC-BY
+* CC-BY-4.0
+* CC-BY-NC
+* CC-BY-NC-SA
+* ODC-BY
+* GPL
+* Research-only terms
+* OpenAI terms
+* Dataset-specific licenses
+
+Some datasets may restrict:
+
+* Commercial use
+* Redistribution
+* Derivative datasets
+* Model training
+* Publication
+* Dataset hosting
+
+### Always verify the original dataset license before using a dataset in a commercial or public model.
+
+The license information in this repository is intended as a discovery aid and should not replace review of the original dataset's license terms.
+
+---
+
+# 🧠 Recommended Dataset Mixtures
+
+## General LLM
+
+```text
+30% Instruction
+20% Conversation
+15% Reasoning
+15% Knowledge / QA
+10% Coding
+10% Safety / Preference
+```
+
+## Coding Model
+
+```text
+40% Code
+20% Instruction
+15% Reasoning
+15% Tool Calling
+10% Conversation
+```
+
+## Agent Model
+
+```text
+25% Instruction
+20% Function Calling
+20% Tool Usage
+15% Reasoning
+10% Conversation
+10% Safety
+```
+
+> These percentages are example engineering strategies, not dataset-specific recommendations from the source catalog.
+
+---
+
+# 🎯 Why ForgeLM-Datasets?
+
+### 🔎 One Place to Discover
+
+Find datasets from many major AI research categories in one catalog.
+
+### 🧩 Modular
+
+Pick only the datasets required for your model.
+
+### 📈 Scalable
+
+The catalog ranges from tiny datasets to resources containing tens of millions of examples.
+
+### 🌍 Multilingual
+
+Supports English, Chinese, Japanese, Portuguese, multilingual and code-oriented resources.
+
+### 🤖 Agent Ready
+
+Includes datasets focused on function calling, tool usage and executable agents.
+
+### 🛡️ Safety Ready
+
+Includes safety, preference and jailbreak-related datasets.
+
+### 🧪 Research Friendly
+
+Useful for experimenting with SFT, alignment, evaluation, reasoning and specialized model training.
+
+---
+
+# 🔬 Research Use Cases
+
+ForgeLM-Datasets can serve as a foundation for experiments involving:
+
+```text
+                ForgeLM-Datasets
+                       │
+       ┌───────────────┼────────────────┐
+       ▼               ▼                ▼
+     SFT            RLHF / DPO        Agents
+       │               │                │
+       ▼               ▼                ▼
+ Instruction        Preference       Tool Use
+   Tuning           Learning       Function Calls
+       │               │                │
+       └───────────────┼────────────────┘
+                       ▼
+                 Specialized LLM
+                       │
+       ┌───────────────┼────────────────┐
+       ▼               ▼                ▼
+   Coding          Reasoning        Multilingual
+       │               │                │
+       └───────────────┼────────────────┘
+                       ▼
+                  Production AI
+```
+
+---
+
+# 📚 Dataset Sources
+
+The catalog references datasets hosted across platforms and research repositories, including:
+
+* Hugging Face Datasets
+* GitHub research repositories
+* Academic research projects
+* Open-source AI organizations
+* Research labs
+
+Each dataset entry retains its original source information wherever available.
+
+---
+
+# 🤝 Contributing
+
+Contributions are welcome.
+
+You can contribute by:
+
+1. Adding a useful open dataset.
+2. Updating dataset metadata.
+3. Correcting dataset links.
+4. Adding language information.
+5. Adding dataset categories.
+6. Improving preprocessing utilities.
+7. Adding validation or deduplication workflows.
+8. Improving documentation.
+
+### Suggested Dataset Entry
+
+```text
+Dataset Name:
+Dataset Size:
+Languages:
+Source:
+License:
+Primary Use:
+Hugging Face Link:
+GitHub Link:
+Notes:
+```
+
+---
+
+# ⭐ Project Philosophy
+
+ForgeLM-Datasets follows a simple philosophy:
+
+> **Don't start dataset discovery from zero. Start from a curated foundation and build your own training mixture.**
+
+The project is intended to reduce the friction between:
+
+```text
+Research
+   ↓
+Dataset Discovery
+   ↓
+Dataset Selection
+   ↓
+Data Engineering
+   ↓
+Model Training
+   ↓
+Evaluation
+   ↓
+Deployment
+```
+
+---
+
+# 🚀 ForgeLM Ecosystem
+
+ForgeLM-Datasets can act as the **data layer** for the broader ForgeLM ecosystem.
+
+```text
+                    ┌────────────────────┐
+                    │   ForgeLM-Datasets │
+                    │     DATA LAYER     │
+                    └─────────┬──────────┘
+                              │
+                              ▼
+                    ┌────────────────────┐
+                    │ Data Engineering   │
+                    │ Preprocessing      │
+                    │ Deduplication      │
+                    │ Filtering          │
+                    └─────────┬──────────┘
+                              │
+                              ▼
+                    ┌────────────────────┐
+                    │    Model Training │
+                    │     SFT / RLHF     │
+                    │     DPO / LoRA     │
+                    └─────────┬──────────┘
+                              │
+                              ▼
+                    ┌────────────────────┐
+                    │     Evaluation     │
+                    │ Reasoning / Safety │
+                    │ Code / Agents      │
+                    └─────────┬──────────┘
+                              │
+                              ▼
+                    ┌────────────────────┐
+                    │    ForgeLM Model   │
+                    └────────────────────┘
+```
+
+---
+
+# 📊 Dataset Scale at a Glance
+
+```text
+1K
+ │
+ ├── Small Research Datasets
+ │
+10K
+ │
+ ├── Instruction / Safety
+ │
+100K
+ │
+ ├── Conversation / Alignment
+ │
+1M
+ │
+ ├── Large SFT Collections
+ │
+10M
+ │
+ ├── Large Instruction Corpora
+ │
+100M+
+ │
+ └── Massive Multilingual / Code Resources
+```
+
+The catalog currently spans resources from approximately **1K examples to tens of millions of examples**, with some datasets represented by storage/file size rather than example count.
+
+---
+
+# 🏁 Getting Started
+
+```bash
+# Clone
+git clone https://github.com/upadrastaharshavardhan/ForgeLM-datasets
+
+# Enter dataset workspace
+cd ForgeLM-datasets/mixed/dataset
+
+# Select your dataset
+# Then preprocess
+python preprocess.py <dataset_name>
+```
+
+From there, the resulting dataset can become part of your own LLM training pipeline.
+
+---
+
+# 👨‍💻 Developed By
+
+<p align="center">
+
+### Harsha Vardhan Upadrasta
+
+**AI / ML Engineer • Automation Engineer • LLM & Agentic AI Researcher**
+
+</p>
+
+---
+
+# ⭐ Support the Project
+
+If ForgeLM-Datasets helps your research or development:
+
+* ⭐ Star the repository
+* 🍴 Fork the project
+* 🧪 Experiment with different dataset mixtures
+* 🛠️ Contribute new datasets
+* 📢 Share it with other AI researchers
+
+---
+
+<p align="center">
+
+### 🧬 ForgeLM-Datasets
+
+**Discover datasets. Forge training mixtures. Build better models.**
+
+</p>
