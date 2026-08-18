@@ -817,7 +817,7 @@ If ForgeLM-Datasets helps your research or development:
 
 * ⭐ Star the repository
 * 🍴 Fork the project
-* 🧪 Experiment with different dataset mixtures
+* 🧪 Experiment with different datasets
 * 🛠️ Contribute new datasets
 * 📢 Share it with other AI researchers
 
